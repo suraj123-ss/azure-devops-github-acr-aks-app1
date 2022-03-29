@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: app1ngnix 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app1ngnix
+  template:
+    metadata:
+      labels:
+        app: app1ngnix 
+    spec:
+      containers:
+        - name: app1ngnix 
+          image: myregistrysuraj.azurecr.io/app1ngnix
+          ports:
+          - containerPort: 80
