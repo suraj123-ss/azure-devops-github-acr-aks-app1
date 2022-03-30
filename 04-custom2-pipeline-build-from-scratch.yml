@@ -9,6 +9,8 @@
 trigger:
 - master
 
+resources:
+- repo: self
 #varibales
 variables:
   tag: '$(Build.BuildId)'
